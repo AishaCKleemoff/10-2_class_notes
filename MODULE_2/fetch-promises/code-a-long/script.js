@@ -6,6 +6,7 @@ const pokemon = document.querySelector(".pokemon");
 
 button.addEventListener("click", (e) => {
     e.preventDefault();
+<<<<<<< HEAD
     const id = input.value;
     fetch(`${BASE_URL}/${id}`)
         .then(data => data.json())
@@ -13,7 +14,21 @@ button.addEventListener("click", (e) => {
             showPokemon(json)
         })
         .catch(err => showError(err))
+=======
+     getData(input.value);
+    
+>>>>>>> d06ff31 (in order to pull)
 });
+function getData(num) {
+    fetch(BASE_URL + "/" + num).then((data) => {
+        data.json()
+        pokemon.textContent = JSON.name
+    })
+        // .then(JSON => {return JSON}) 
+    
+}
+            
+
 // documentation here: https://pokeapi.co/
 
 // firesin the event we have success!
